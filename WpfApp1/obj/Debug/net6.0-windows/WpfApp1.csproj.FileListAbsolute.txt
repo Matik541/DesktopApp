@@ -18,3 +18,10 @@ C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-w
 C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.pdb
 C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\ref\WpfApp1.dll
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.Properties.Resources.resources
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.GenerateResource.cache
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\calcWindow.g.cs
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\WpfApp1_MarkupCompile.lref
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\calcWindow.baml
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\Window1.g.cs
+C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\obj\Debug\net6.0-windows\Window1.baml

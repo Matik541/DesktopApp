@@ -9,7 +9,7 @@
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
         <Button>1</Button>
         <Button>2</Button>
-        <Button>3</Button>
+        <Button>3</Button>`
         <Button>4</Button>
         <Button>5</Button>
     </StackPanel>
@@ -104,9 +104,22 @@
     </DockPanel>
     -->
     <StackPanel>
-        <TextBlock>
-            Text w 'innerText' TextBlocku
+        <TextBlock TextWrapping="WrapWithOverflow">
+            Zawijanie telstu
+            <LineBreak/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et auctor orci, eu egestas quam. Integer ultricies accumsan ex non aliquet. Maecenas sit amet nisi vitae sem pulvinar dictum ut quis diam. In euismod enim risus, ac venenatis libero accumsan id. Mauris vel mollis sem. Sed mauris velit, auctor quis velit vitae, suscipit aliquet diam. Aenean a sapien lacinia, molestie ligula sed, sodales elit. Fusce arcu sapien, tristique quis vehicula sit amet, vestibulum eu ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nunc ante, gravida nec dui fringilla, rhoncus fermentum ante. Aliquam porta, lacus a tincidunt fermentum, ligula ex placerat justo, sed posuere justo nulla sed nunc. Fusce ac enim magna. Aliquam vitae scelerisque eros. Aenean suscipit purus eget turpis tempus scelerisque. Nullam facilisis nulla velit, ut porta risus sodales eu. Sed cursus ex lectus, vitae dictum ex cursus nec.
         </TextBlock>
-        <TextBlock Text="Text w 'parametrze' TextBlocku"/>
+        <TextBlock>
+            Text in <Bold>'innerText'</Bold> of TextBlocku
+        </TextBlock>
+        <TextBlock Text="Text in 'param' of TextBlock"/>
+        <Label Content="Label content"/>
+        <Button Content="Button content"/>
+        <TextBox x:Name="textBox" SpellCheck.IsEnabled="True" Language="pl-pl" AcceptsReturn="True"/>
+        <TextBlock x:Name="dispalyText" Text="{Binding ElementName=textBox, Path=Text}"/>
+        <StackPanel Orientation="Horizontal">
+            <Image Height="20" Source="/Resources/images.jpg"/>
+            <TextBlock>Jakiś text</TextBlock>
+        </StackPanel>
     </StackPanel>
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\programista\Desktop\DesktopApps3Pgr2\WpfApp1\WpfApp1\App.xaml
-11407045341
+31976975580
 
-5-1303815099
+8-1787154617
 194-2004305220
-MainWindow.xaml;
+calcWindow.xaml;MainWindow.xaml;Window1.xaml;
 
-False
+True
 
