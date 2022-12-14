@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <UniformGrid>
+        <TabControl SelectedIndex="0">
+            <!--TabStripPlacement="Left"-->
+            <!-- New View -->
+            <TabItem Header="Tab 1">
+                <!-- View content-->
+                <TextBlock Text="Tab 1 Content" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="Red" Width="20" Height="20"/>
+                        <Label>ContextControl</Label>
+                    </StackPanel>
+                </TabItem.Header>
+                <ItemsControl>
+                    <Button Content="1"/>
+                    <Button Content="2"/>
+                    <Button Content="3"/>
+                    <Button Content="4"/>
+                    <Button Content="5"/>
+                    <UniformGrid Columns="2">
+                        <Button>6.1</Button>
+                        <Button>6.2</Button>
+                        <Button>7</Button>
+                    </UniformGrid>
+                </ItemsControl>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Label>ContextControl 2</Label>
+                </TabItem.Header>
+                <ItemsControl ItemsSource="{Binding Class1s}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Name}"/>
+                                <Label Content="{Binding Description}"/>
+                                <Label Content="{Binding Category}"/>
+                                <Label Content="{Binding Score}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </TabItem>
+            <TabItem Header="ListBox">
+                <ListBox SelectionMode="Multiple" ItemsSource="{Binding Class1s}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Name}"/>
+                                <Label Content="{Binding Description}"/>
+                                <Label Content="{Binding Category}"/>
+                                <Label Content="{Binding Score}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </TabItem>
+            <TabItem Header="ListView">
+                <StackPanel>
+                    <ListView ItemsSource="{Binding Class1s}" SelectedItem="{Binding SelectedClass}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding Name}"/>
+                                    <Label Content="{Binding Description}"/>
+                                    <Label Content="{Binding Category}"/>
+                                    <Label Content="{Binding Score}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Content="Show" Click="showSelected" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="ListView GridView">
+                <ListView ItemsSource="{Binding Class1s}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}"/>
+                            <GridViewColumn Header="Category" DisplayMemberBinding="{Binding Category}"/>
+                            <GridViewColumn Header="Score" DisplayMemberBinding="{Binding Score}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+            <TabItem Header="DataGrid">
+                <StackPanel>
+                    <DataGrid ItemsSource="{Binding Class1s}">
+                    </DataGrid>
+                    <UniformGrid DockPanel.Dock="Bottom" Columns="2">
+                        <TextBlock Text="Name"/>
+                        <TextBox x:Name="newName"/>
+                        <TextBlock Text="Description"/>
+                        <TextBox x:Name="newDescription"/>
+                        <TextBlock Text="Category"/>
+                        <TextBox x:Name="newCategory"/>
+                        <TextBlock Text="Score"/>
+                        <TextBox x:Name="newScore"/>
+                        <Button Content="AddNew" Click="addNew"/>
+                        <Button Content="EditSelected" Click="editSelected" IsEnabled="False"/>
+                    </UniformGrid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </UniformGrid>
+</Window>
