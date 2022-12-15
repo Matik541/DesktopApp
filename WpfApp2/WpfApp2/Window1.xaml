@@ -111,7 +111,8 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
                         <DataGridTextColumn Header="Weight" Binding="{Binding Weight}"/>
-                        <DataGridTextColumn Header="Vege" Binding="{Binding Vege}"/>
+                        <!-- CHECKBOX -->
+                        <DataGridCheckBoxColumn Header="Vege" Binding="{Binding Vege}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
