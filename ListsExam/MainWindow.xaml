@@ -1,0 +1,18 @@
+﻿<Window x:Class="ListsExam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListsExam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <UniformGrid>
+        <DataGrid ItemsSource="{Binding ToDoList}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="What to do" Binding="{Binding name}"/>
+                <DataGridCheckBoxColumn Header="Is done?" Binding="{Binding isDone}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding date}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </UniformGrid>
+</Window>
